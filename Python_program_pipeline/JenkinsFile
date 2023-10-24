@@ -1,0 +1,21 @@
+pipeline {
+
+    agent any
+
+    stages{
+        stage('Building Code') {
+            steps{
+                bat 'echo "Demo Building Code"'
+
+            }
+            
+        }
+        stage('Executing Code'){
+            steps{
+                bat 'python test.py'
+
+            }
+        }
+
+    }
+}
